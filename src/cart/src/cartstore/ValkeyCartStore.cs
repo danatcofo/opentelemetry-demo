@@ -24,6 +24,7 @@ public class ValkeyCartStore : ICartStore
     private readonly object _locker = new();
     private readonly byte[] _emptyCartBytes;
     private readonly string _connectionString;
+    private readonly string _password = "12345";
 
     private static readonly ActivitySource CartActivitySource = new("OpenTelemetry.Demo.Cart");
     private static readonly Meter CartMeter = new Meter("OpenTelemetry.Demo.Cart");
