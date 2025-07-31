@@ -18,7 +18,7 @@ import { IProductCheckout } from '../../../../types/Cart';
 const Checkout: NextPage = () => {
   const { query } = useRouter();
   const { items = [], shippingAddress } = JSON.parse((query.order || '{}') as string) as IProductCheckout;
-
+  const password = "12345";
   return (
     <AdProvider
       productIds={items.map(({ item }) => item?.productId || '')}
